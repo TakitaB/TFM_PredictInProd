@@ -5,7 +5,7 @@ from TaxiFareModel.data import get_data_from_gcp, clean_data
 from TaxiFareModel.encoders import TimeFeaturesEncoder, DistanceTransformer
 from TaxiFareModel.gcp import storage_upload
 from TaxiFareModel.utils import compute_rmse
-from TaxiFareModel.params import MLFLOW_URI, EXPERIMENT_NAME, BUCKET_NAME, MODEL_VERSION, MODEL_VERSION
+from TaxiFareModel.params import MLFLOW_URI, EXPERIMENT_NAME, BUCKET_NAME, MODEL_VERSION
 from memoized_property import memoized_property
 from mlflow.tracking import MlflowClient
 from sklearn.compose import ColumnTransformer
@@ -13,8 +13,6 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
-
-
 
 class Trainer(object):
     def __init__(self, X, y):

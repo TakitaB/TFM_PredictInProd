@@ -42,7 +42,7 @@ def compute_rmse(y_pred, y_true):
 
 
 ################
-#  DECORATORS  #
+## DECORATORS ##
 ################
 
 def simple_time_tracker(method):
